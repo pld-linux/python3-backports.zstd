@@ -6,12 +6,13 @@ Summary:	Backport of compression.zstd
 Summary(pl.UTF-8):	Backport modułu compression.zstd
 Name:		python3-backports.zstd
 Version:	1.2.0
-Release:	1
+Release:	2
 License:	PSF v2, BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/backports-zstd/
 Source0:	https://files.pythonhosted.org/packages/source/b/backports-zstd/backports_zstd-%{version}.tar.gz
 # Source0-md5:	f78ff5bf615cf8198dadecee121b66ee
+Patch0:		backports_zstd-flags.patch
 URL:		https://pypi.org/project/backports.zstd/
 BuildRequires:	python3-devel >= 1:3.9
 BuildRequires:	python3-devel < 1:3.14
@@ -31,6 +32,7 @@ Backport PEP-784 - dodania Zstandard do biblioteki standardowej.
 
 %prep
 %setup -q -n backports_zstd-%{version}
+%patch -P0 -p1
 
 %build
 %py3_build \
