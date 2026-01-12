@@ -6,7 +6,7 @@ Summary:	Backport of compression.zstd
 Summary(pl.UTF-8):	Backport modułu compression.zstd
 Name:		python3-backports.zstd
 Version:	1.2.0
-Release:	2
+Release:	3
 License:	PSF v2, BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/backports-zstd/
